@@ -16,16 +16,16 @@ const ExamItem = ({
   end,
 }) => {
   return (
-    <div className="flex justify-around items-center ">
+    <div className="flex items-center">
+      <div className="w-1/12">{duration} hours </div>
+      <div className="w-2/12">{date ? format(parseISO(date), "PPP") : ""}</div>
+      <div className="w-1/12">{settername}</div>
+      <div className="w-1/12">{dept_name}</div>
+      <div className="w-1/12">{title}</div>
+      <div className="w-1/12">{start}</div>
+      <div className="w-1/12">{end}</div>
+      <div className="w-1/12">{subject_id}</div>
       <div>{id}</div>
-      <div>{duration} hours </div>
-      <div>{format(parseISO(date), "PPP")}</div>
-      <div>{settername}</div>
-      <div>{dept_name}</div>
-      <div>{title}</div>
-      <div>{start}</div>
-      <div>{end}</div>
-      <div>{subject_id}</div>
     </div>
   );
 };

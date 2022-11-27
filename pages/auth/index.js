@@ -12,13 +12,16 @@ const AuthPage = () => {
     e.preventDefault();
     console.log(id, name, contact, depid, email);
 
-    const { data } = await axios.post("http://localhost:3001/teacher", {
-      id: id,
-      contact: contact,
-      name: name,
-      department_id: depid,
-      email: email,
-    });
+    const { data } = await axios.post(
+      `${process.env.NEXT_PUBLIC_API_URI}/teacher`,
+      {
+        id: id,
+        contact: contact,
+        name: name,
+        department_id: depid,
+        email: email,
+      }
+    );
 
     console.log("success", data);
 
